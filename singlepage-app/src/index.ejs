@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style type="text/css">
+    .mybgcolor{
+      background-color: #2b3352;
+    }
+    .mylinkscolor{
+      color: #ffffff !important;
+    }
+    .mylinkscolor:hover{
+      color: rgb(193, 190, 190) !important;
+    }
+    .openai_realized{
+      font-size: 0.6rem;
+      color: #585454;
+    }
+    .openai_response{
+      min-height: 250px;
+      margin-top: 10px;
+      padding-top: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      background-color: #e4e0e095;
+    }
+    .technology_row{
+      padding-bottom: 10px;
+    }
+    .container_style{
+      font-family: Avenir, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-align: center;
+      margin-top: 20px;
+    }
+    body {
+      margin:0;
+      padding:0;
+      overflow-x: hidden; 
+    }
+    .hidden_x{
+      overflow-x :hidden; 
+    }
+    .footer_link{
+      color: #ffffff;
+      padding-right: 20px;
+      padding-bottom: 20px;
+    }
+    .footer_copyright{
+      padding-top: 20px;
+    }
+    .angular_button{
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+    .angular_output{
+      font-family: Avenir, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .angular_container{
+      font-family: Avenir, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .site_heading{
+      color: #ffffff;
+      font-family: Avenir, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      margin-right: 20px;
+      font-size: 1.2rem;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .site_heading:hover{
+      text-decoration: none;
+      color: #ffffff;
+    }
+    .footer_padding{
+      padding-top: 30px;
+    }
+    .angular_row{
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background-color: #EEEEEE;
+      background-image: URL(https://vrbapetr.cz/bp/assets/design_img/angular_bg.png);
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: contain;
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+    .vue_row{
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background-color: #FFFFFF;
+      background-image: URL(https://vrbapetr.cz/bp/assets/design_img/vue_bg.png);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: contain;
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+    .react_row{
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background-color: #EEEEEE;
+      background-image: URL(https://vrbapetr.cz/bp/assets/design_img/react_bg.png);
+      background-position: right center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: contain;
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+    .card{
+      background-color: rgba(255,255,255,0.75);
+    }
+    @media only screen and (max-width: 600px) {
+      .angular_row{
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background-color: #EEEEEE;
+      background-image: URL(https://vrbapetr.cz/bp/assets/design_img/angular_mobile_bg.png);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: contain;
+      padding-left: 5%;
+      padding-right: 2%;
+    }
+    .vue_row{
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background-color: #FFFFFF;
+      background-image: URL(https://vrbapetr.cz/bp/assets/design_img/vue_mobile_bg.png);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: contain;
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+    .react_row{
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background-color: #EEEEEE;
+      background-image: URL(https://vrbapetr.cz/bp/assets/design_img/react_mobile_bg.png);
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: contain;
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+    .footer_padding{
+      text-align: center;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .footer_copyright{
+      text-align: center;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    }
+  </style>
+  <title>Bakalářská práce</title>
+
+  <script src="https://unpkg.com/zone.js@0.6.23?main=browser"></script>
+  <!--
+    Remove this if you only support browsers that support async/await.
+    This is needed by babel to share largeish helper code for compiling async/await in older
+    browsers. More information at https://github.com/single-spa/create-single-spa/issues/112
+  -->
+  <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.7/runtime.min.js"></script>
+
+  <!--
+    This CSP allows any SSL-enabled host and for arbitrary eval(), but you should limit these directives further to increase your app's security.
+    Learn more about CSP policies at https://content-security-policy.com/#directive
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';">
+  <meta name="importmap-type" content="systemjs-importmap" />
+  <!-- If you wish to turn off import-map-overrides for specific environments (prod), uncomment the line below -->
+  <!-- More info at https://github.com/joeldenning/import-map-overrides/blob/master/docs/configuration.md#domain-list -->
+  <!-- <meta name="import-map-overrides-domains" content="denylist:prod.example.com" /> -->
+
+  <!-- Shared dependencies go into this import map. Your shared dependencies must be of one of the following formats:
+
+    1. System.register (preferred when possible) - https://github.com/systemjs/systemjs/blob/master/docs/system-register.md
+    2. UMD - https://github.com/umdjs/umd
+    3. Global variable
+
+    More information about shared dependencies can be found at https://single-spa.js.org/docs/recommended-setup#sharing-with-import-maps.
+  -->
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
+        "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js"
+      }
+    }
+  </script>
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js" as="script">
+
+  <!-- Add your organization's prod import map URL to this script's src  -->
+  <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
+
+  <% if (isLocal) { %>
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
+        "@BakalarskaPrace/root-config": "//localhost:9000/BakalarskaPrace-root-config.js",
+        "@react-app/react-project": "http://localhost:8080/react-app-react-project.js",
+        "@angular-app/angular-project": "http://localhost:8081/main.js",
+        "@vueapp/vue-app": "http://localhost:8082/js/app.js"
+      }
+    }
+  </script>
+  <% } %>
+
+  <!--
+    If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
+    Learn more about why at https://single-spa.js.org/docs/ecosystem-angular/#zonejs
+  -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
+  <% if (isLocal) { %>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.js"></script>
+  <% } else { %>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
+  <% } %>
+
+</head>
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div class="container">
+    <script>
+      System.import('@BakalarskaPrace/root-config');
+    </script>
+  </div>
+  <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
+</body>
+</html>

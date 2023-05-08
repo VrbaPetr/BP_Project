@@ -1,0 +1,92 @@
+<style>
+
+</style>
+
+<!-- Toolbar -->
+
+<div class="container angular_container row justify-content-center" role="main">
+  <div class="row my-auto justify-content-center">
+  <h2> Single Page Aplikace a Micro-Frontend</h2>
+  <input type="hidden" #selection>
+    <div class="row justify-content-center">
+      <a href="#" class="btn-sm btn-info angular_button" (click)="selection.value = 'spa'">O Single Page Aplikacích</a>
+      <a href="#" class="btn-sm btn-info angular_button" (click)="selection.value = 'mf'">O Micro-Frontend</a>
+    </div>
+    <div class="row justify-content-center">
+    <a href="#" class="btn-sm btn-info angular_button" (click)="selection.value = 'spa_plus'">Výhody SPA</a>
+    <a href="#" class="btn-sm btn-info angular_button" (click)="selection.value = 'mf_plus'">Výhody MF</a>
+    <a href="#" class="btn-sm btn-info angular_button" (click)="selection.value = 'about'">Více o aplikaci</a>
+    </div>
+  </div>
+  <!-- Terminal -->
+  <div class="row my-auto justify-content-center">
+  <div class="angular_output" [ngSwitch]="selection.value">
+        <div class="card" *ngSwitchDefault>
+          <div class="card-body">
+            <h5 class="card-title">Single Page Aplikace</h5>
+            <p class="card-text">Single Page Aplikace (SPA) jsou takové, které se načítají jako jedna jediná stránka. Aplikace může mít jednostránkový design ale stejně tak může mít klasickou strukturu odkazů. Rozdíl je ale v tom, že narozdíl od zbytku stránek se jednostránkové načítají
+              jednou a následná orientace po stránce se již odehrává v prohlížeči. Díky tomu jsou tak mnohem rychlejší a efektivnějsí. Sami
+              si zkuste, že po kliknutí na jakoukoliv funkcionalitu na této stránce se aplikace nemusí načítat, ale přitom se mění její obsah.</p>
+            <a href="https://www.spiceworks.com/tech/devops/articles/what-is-single-page-application/" target="_blank" class="card-link">Vice o SPA (Anglicky)</a>
+          </div>
+        </div>
+        <div class="card" *ngSwitchCase="'spa'">
+          <div class="card-body">
+            <h5 class="card-title">Single Page Aplikace</h5>
+            <p class="card-text">Single Page Aplikace (SPA) jsou takové, které se načítají jako jedna jediná stránka. Aplikace může mít jednostránkový design
+              ale stejně tak může mít klasickou strukturu odkazů. Rozdíl je ale v tom, že narozdíl od zbytku stránek se jednostránkové načítají
+              jednou a následná orientace po stránce se již odehrává v prohlížeči. Díky tomu jsou tak mnohem rychlejší a efektivnějsí. Sami
+              si zkuste, že po kliknutí na jakoukoliv funkcionalitu na této stránce se aplikace nemusí načítat, ale přitom se mění její obsah.</p>
+            <a href="https://www.spiceworks.com/tech/devops/articles/what-is-single-page-application/" target="_blank" class="card-link">Vice o SPA (Anglicky)</a>
+          </div>
+        </div>
+        <div class="card" *ngSwitchCase="'mf'">
+          <div class="card-body">
+            <h5 class="card-title">Micro-Frontend</h5>
+            <p class="card-text">Micro-Frontend (MF) je jedna z variant, jak lze pojmout vývoj aplikace. Je pravým opakem aplikací monolitických. U monolitické
+              aplikace se totiž vývoj a funcionalita odehrává v podobě jedné spojité aplikace. U Micro-Fronted se ale aplikuje takzvaná
+              mikroservis architektura. Ta rozděluje celek do jednotlivých komponent / služeb, které jsou na sobě nezávislé. To umožňuje jejich
+              oddělený vývoj i nahrazování. Micro-Frontend je pak pojem věnující se spojení view všech komponent do na pohled celistvé stránky.
+            </p>
+            <a href="https://www.xenonstack.com/insights/micro-frontend-architecture" target="_blank" class="card-link">Více o Micro-Frontend (Anglicky)</a>
+          </div>
+        </div>
+        <div class="card" *ngSwitchCase="'spa_plus'">
+          <div class="card-body">
+            <h5 class="card-title">Výhody SPA</h5>
+            <p class="card-text">SPA má oproti dalším technologiím opravdu velké množství výhod. Tou první je rychlost, kdy se díky načtení celé
+              prezentační logiky odehrává orientace na stránce extrémně rychle. Mimo toho je načtení kompletního view jen do prohlížeče i důvodem,
+              proč mohou Single Page Aplikace fungovat i v případě, kdy po načtení není uživatel online. Všechny tyto výhody přitom vnímá i sám
+              provozovatel webu. A to tak, že díky dělbě práce mezi server a prohlížeč u uživatele, je výrazně nižší zatížení produkčního serveru.
+            </p>
+            <a href="https://www.spiceworks.com/tech/devops/articles/what-is-single-page-application/" target="_blank" class="card-link">Vice o SPA (Anglicky)</a>
+          </div>
+        </div>
+        <div class="card" *ngSwitchCase="'mf_plus'">
+          <div class="card-body">
+            <h5 class="card-title">Výhody Micro-Frontend</h5>
+            <p class="card-text">Všechny výhody se budou týkat nejen samotného frontend, ale všech mikroservis. Hlavní výhodou je striktní oddělení,
+              díky čemuž tak nemusí jedna komponenta ovlivnit druhou. Od návrhu, přes vývoj až po údržbu tak mohou být komponenty vyvíjeny asynchronně
+              a mohou na nich pracovat rozdílné týmy a jedinci. Navíc pokud bych chtěl tuto aplikaci stavět monolitickou architekturou, tak musím
+              zvolit jedinou technologii. Takhle ale díky mikroservisám mohu na jedné stránce mít React.js, Angular, Vue.js a další frameworky.
+            </p>
+            <a href="https://www.xenonstack.com/insights/micro-frontend-architecture" target="_blank" class="card-link">Více o Micro-Frontend (Anglicky)</a>
+          </div>
+        </div>
+        <div class="card" *ngSwitchCase="'about'">
+          <div class="card-body">
+            <h5 class="card-title">Více o této aplikaci</h5>
+            <p class="card-text">Celá aplikace je realizována za pomocí javascriptového routeru single-spa. Díky jeho funkcionalitě mohu jednotlivé
+              komponenty svojit v celistvou stránku a generovat tak plnohodnotnou aplikaci. Jako první komponent, ve kterém je i tento text, je ukázka
+              dynamického textu v Angular. Prostřední komponent je potom opět ukázkou dynamických prvků, ale tentokrát v jazyce Vue.js. A poslední
+              komponent je v React.js a využil jsem jej k napojení na populární OpenAI API. Celá stránka je dostupná také na mém GitHUB.
+            </p>
+            <a href="#" class="card-link">Dokumentace</a>
+            <a href="#" class="card-link">GitHUB Respozitář</a>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,62 @@
+
+<single-spa-router>
+  <!--
+
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/ for more information.
+<application name="@single-spa/welcome"></application>
+
+
+Single Page Applications s využitím perspektivní metody Micro-Fronted
+  -->
+
+
+  <main class="hidden_x">
+    
+    <nav class="navbar navbar-expand-lg navbar-light mybgcolor">
+      <a class="site_heading" href="#">SPA s využitím Micro-Fronted</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link mylinkscolor" target="_blank" href="http://vrbapetr.cz/bp/assets/docs/vrba_bp.pdf">Text Bakalářské práce</a>
+          <a class="nav-item nav-link mylinkscolor" target="_blank" href="https://github.com/VrbaPetr/BP_Project#">Projekt na GitHUB</a>
+        </div>
+      </div>
+    </nav>
+    <route default>
+      <div class="row">
+        <div class="col-md-4 angular_row justify-content-center">
+          <application name="@angular-app/angular-project"></application>
+        </div>
+        <div class="col-md-4 vue_row justify-content-center">
+          <application name="@vueapp/vue-app"></application>  
+        </div>
+        <div class="col-md-4 react_row justify-content-center">
+          <application name="@react-app/react-project"></application>  
+        </div>
+      </div>
+      
+      
+    </route>
+    
+    
+    <div class="row mybgcolor justify-content-center">
+          <p class="breadcrumb-item active justify-content-center footer_padding" aria-current="page">
+            Aplikace slouží jako veřejně dostupná prezentace k tvorbě Single 
+            Page Aplikací s využitím technologie Micro-Frontend.
+          </p>
+      <p class="mylinkscolor footer_copyright">&copy 2023 Petr Vrba, Všechna práva vyhrazena. Tato aplikace vznikla jako bakalářská práce.</p>
+    </div>
+    <div class="row mybgcolor justify-content-center">
+          <a class="nav-item nav-link mylinkscolor" target="_blank" href="http://vrbapetr.cz/bp/assets/docs/poster.pdf">Poster k BP</a>
+          <a class="nav-item nav-link mylinkscolor" target="_blank" href="https://www.jcu.cz/">Jihočeská univerzita</a>
+          <a class="nav-item nav-link mylinkscolor" target="_blank" href="https://www.pf.jcu.cz/cz/fakulta/katedry/katedra-informatiky">Katedra informatiky</a>
+    </div>
+          
+      </div>
+    </div>
+  </div>
+  </main>
+</single-spa-router>
